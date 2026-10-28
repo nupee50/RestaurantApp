@@ -7,11 +7,40 @@ using System.Threading.Tasks;
 namespace RestaurantApp
 {
     internal class Program
+        
     {
         static void Main(string[] args)
         {
             Console.WriteLine("rak mai");
             Console.WriteLine("Week 2");
+
+            //Create List
+            List<Restaurant> restaurants = new List<Restaurant>
+            {
+                 new Restaurant(1, "Quanjude Roast Duck", "Beijing Cuisine", 4.5),
+                 new Restaurant(2, "Donglaishun Hot Pot", "Hot Pot", 4.6),
+                 new Restaurant(3, "Din Tai Fung", "Taiwanese Cuisine", 4.7),
+                 new Restaurant(4, "Huguosi Snacks", "Snacks", 4.2),
+                 new Restaurant(5, "Haidilao Hot Pot","Hot Pot",4.8)
+            };
+
+        }
+    }
+    public class Restaurant
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public double Rating { get; set; }
+
+        public Restaurant(int id, string name, string type, double rating)
+        {
+            Id = id;
+            Name = name;
+            Type = type;
+            Rating = rating;
         }
     }
 }
+
+            
